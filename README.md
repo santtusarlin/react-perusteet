@@ -40,7 +40,63 @@ npm start
 
 ## JSX
 
-React kehityksessä käytetään ES6/JSX (JavaScript XML) koodia. Yksinkertaisesti selitettynä JSX on muuten syntaksiltaan samanlaista kuin JavaScript, mutta se sallii HTML tagien käytön JavaScriptin sisällä.
+React kehityksessä käytetään ES6/JSX (JavaScript XML) koodia. Yksinkertaisesti selitettynä JSX on muuten syntaksiltaan samanlaista kuin JavaScript, mutta se sallii HTML tagien käytön JavaScriptin sisällä. HTML koodi käännetään Babelin avulla JavaScriptiksi.
+
+Esim. JSX koodista
+```
+var nav = (
+    <ul id="nav">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Clients</a></li>
+      <li><a href="#">Contact Us</a></li>
+    </ul>
+);
+```
+
+Babelin käännetyä sen JavaScriptiksi se näyttää tältä:
+```
+var nav = React.createElement(
+   "ul",
+   { id: "nav" },
+   React.createElement(
+      "li",
+      null,
+      React.createElement(
+         "a",
+         { href: "#" },
+         "Home"
+      )
+   ),
+   React.createElement(
+      "li",
+      null,
+      React.createElement(
+         "a",
+         { href: "#" },
+         "About"
+      )
+   ),
+   React.createElement(
+      "li",
+      null,
+      React.createElement(
+         "a",
+         { href: "#" },
+         "Clients"
+      )
+   ),
+   React.createElement(
+      "li",
+      null,
+      React.createElement(
+         "a",
+         { href: "#" },
+         "Contact Us"
+      )
+   )
+);
+```
 
 Esimerkki asettaa ```h1```-tageihin JavaScript funktion palauttaman arvo.
 ```
@@ -64,6 +120,12 @@ Reactissa käytetään kahdenlaisia komponentteja, tilallisia sekä tilattomia.
 
 ### Functional komponentit (Stateless)
 
+Funktionaalinen komponentti on periaatteessa vain puhdas JavaScript funktio, joka ottaa propsit argumenttina ja palauttaa react elementin.
+
+Funktionaalisella komponentilla ei ole statea eikä lifecycleä joten ```hooks```eja ei voida käyttää sen sisällä.
+
+Funktionaalisia komponentteja tulisi käyttää esim. sellaisiin komponentteihin jotka vain renderöivät propseja ja silloin kun komponentilla ei ole mitään tarvetta statelle, lifecycle hookeille tai sisäisille muuttujille.
+
 ```
 const ChildComponent = (props) => {
     return (
@@ -77,6 +139,10 @@ export default ChildComponent;
 ```
 
 ### Class komponentit (Stateful)
+
+Class-komponenttia tulisi taas käyttää silloin kun komponentti tarvitsee statea datanhallintaan tai esim. sisältää elementtejä jotka ottavat käyttäjältä inputin vastaan.
+
+Stateful komponentit ovat siis Reaktiivisia, eli ne päivittävät DOM:ia tarvittaessa.
 
 ```
 import React from 'react';
