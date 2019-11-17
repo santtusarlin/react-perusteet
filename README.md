@@ -193,4 +193,11 @@ https://reactjs.org/tutorial/tutorial.html
 
 ## Tehtävä
 
-Kehitä jokin haluamasi pieni React sovellus, joka sisältää vähintään kaksi komponenttia, ja siinä hyödynnetään propseja sekä statea. Esim. yksinkertainen TO-DO/muistiinpano sovellus.
+Kehitä jokin haluamasi pieni React sovellus joka sisältää vähintään seuraavat:
+* Funktionaalinen komponentti
+* Luokka-komponentti
+* Propseja hyödynnetty vähintään kerran
+* Statea hyödynnetty vähintään kerran
+* Datan syöttö ja sen tulostus tulee löytyä eri komponenteista
+
+Ratkaisu voisi olla esim. yksinkertainen TO-DO/muistiinpano sovellus.
