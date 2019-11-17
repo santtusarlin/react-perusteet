@@ -201,3 +201,6 @@ Kehitä jokin haluamasi pieni React sovellus joka sisältää vähintään seura
 * Datan syöttö ja sen tulostus tulee löytyä eri komponenteista
 
 Ratkaisu voisi olla esim. yksinkertainen TO-DO/muistiinpano sovellus.
+
+### Lisähaaste
+Jos haluat tehtävään hieman haastetta, lisää sovellukseen reititys ja pidä datan syöttö ja tulostus eri komponenteissa sekä reiteissä.
