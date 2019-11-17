@@ -1,5 +1,17 @@
 # React-perusteet
 
+### 1. [Yleistä](#yleistä)
+### 2. [Kehitysympäristö ja asennus](#kehitysympäristö-ja-asennus)
+### 3. [JSX](#jsx)
+### 4. [Komponentit](#komponentit)
+>#### 4.1 [Functional komponentit](#functional-komponentit-(stateless))
+>#### 4.2 [Class komponentit](#class-komponentit-(stateful))
+>#### 4.3 [Props](#props)
+>#### 4.4 [State](#state)
+>#### 4.5 [Routing](#routing)
+### 5. [Tutoriaaleja](#tutoriaaleja)
+### 6. [Tehtävä](#tehtävä)
+
 ## Yleistä
 [React](https://reactjs.org/) on komponenttipohjainen JavaScript-kirjasto web-käyttöliittymien tekoon, jonka kehityksen taustalla toimii Facebook. (ei sovelluskehys kuten Angular)
 
@@ -171,7 +183,7 @@ React Router on hyvin helppokäyttöinen, alla on toteutettu yksinkertainen SPA-
 </Router>
 ```
 
-### Tutoriaaleja
+## Tutoriaaleja
 
 Tässä vielä pari linkkiä hyviin tutoriaaleihin.
 
@@ -181,3 +193,4 @@ https://reactjs.org/tutorial/tutorial.html
 
 ## Tehtävä
 
+Kehitä jokin haluamasi pieni React sovellus, joka sisältää vähintään kaksi komponenttia, ja siinä hyödynnetään propseja sekä statea. Esim. yksinkertainen TO-DO/muistiinpano sovellus.
