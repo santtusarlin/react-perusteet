@@ -116,6 +116,45 @@ const element = (
 
 ## Komponentit
 
+### Sovelluksen rakenne
+
+Esimerkki sovelluksen komponenttirakenteesta ```Layout.js```.
+```
+import React from 'react';
+
+import Header from './header';
+import Footer from './footer';
+import ParentComponent from './parentComponent';
+
+const Layout = () => {
+    return (
+        <div className="Layout">
+            <Header />
+            <ParentComponent />
+            <Footer />
+        </div>
+    )
+}
+
+export default Layout;
+```
+
+Koko sovellus renderöidään ```index.js``` tiedostossa.
+
+```
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+import Layout from './Layout';
+import './index.css';
+
+ReactDOM.render(
+    <Layout />,
+    document.getElementById('root')
+  );
+```
+
+
 Reactissa käytetään kahdenlaisia komponentteja, tilallisia sekä tilattomia.
 
 ### Functional komponentit (Stateless)
